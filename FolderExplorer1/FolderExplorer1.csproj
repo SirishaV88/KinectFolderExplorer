@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{01236823-6759-4E75-8C46-615F46F23F32}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FolderExplorer1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Kinect, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reflection.Context" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrowserPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BrowserPanel.Designer.cs">
+      <DependentUpon>BrowserPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Disposer.cs" />
+    <Compile Include="HelpScreen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HelpScreen.Designer.cs">
+      <DependentUpon>HelpScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Item.Designer.cs">
+      <DependentUpon>Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KinectManager.cs" />
+    <Compile Include="PointerFeedback.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenCopier.cs" />
+    <Compile Include="UserControl_Browser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Browser.Designer.cs">
+      <DependentUpon>UserControl_Browser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_DirBrowserScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_DirBrowserScreen.Designer.cs">
+      <DependentUpon>UserControl_DirBrowserScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Menu_Options.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl_Menu_Options.Designer.cs">
+      <DependentUpon>UserControl_Menu_Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileExp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileExp.Designer.cs">
+      <DependentUpon>FileExp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl_Message.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Message.Designer.cs">
+      <DependentUpon>UserControl_Message.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BrowserPanel.resx">
+      <DependentUpon>BrowserPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpScreen.resx">
+      <DependentUpon>HelpScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item.resx">
+      <DependentUpon>Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Browser.resx">
+      <DependentUpon>UserControl_Browser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_DirBrowserScreen.resx">
+      <DependentUpon>UserControl_DirBrowserScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Menu_Options.resx">
+      <DependentUpon>UserControl_Menu_Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileExp.resx">
+      <DependentUpon>FileExp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Message.resx">
+      <DependentUpon>UserControl_Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\MenuBack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\close_button_T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\DirIndecator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\RecylceBin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ScrollBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startmenu.png" />
+    <None Include="Resources\questionMark.png" />
+    <None Include="Resources\driverImage.png" />
+    <None Include="Resources\blueArrowRightImage.png" />
+    <None Include="Resources\blueArrowLeftImage.png" />
+    <None Include="Resources\blueArrowImage.png" />
+    <None Include="Resources\blueBackImage.png" />
+    <None Include="Resources\shortcutsImage.png" />
+    <None Include="Resources\programFiles.png" />
+    <None Include="Resources\RecentDocuments.png" />
+    <None Include="Resources\Yellow Documents.png" />
+    <None Include="Resources\Windows-Live-Gallery-icon.png" />
+    <None Include="Resources\VIDEO_ICON.png" />
+    <None Include="Resources\Music-icon.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\documentIcon.png" />
+    <None Include="Resources\My ComputerIcon.png" />
+    <None Include="Resources\desktop.png" />
+    <None Include="Images\pointRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\paste2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\copy2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\open2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pointLeft1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pointLeftCopy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pointRight1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pointRightCopy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ladybug_red1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pointLeft2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pointLeftCopy2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pointRight2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pointRightCopy2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pointLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\title.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
